@@ -11,6 +11,6 @@ function auth(req, res, next) {
         req.user = verified;
         next();
     } catch (e) {
-        return res.status(400).send("Invalid C redentials");
+        return res.status(400).send("Invalid Credentials");
     }
 }
