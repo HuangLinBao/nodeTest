@@ -5,6 +5,7 @@ const app = express();
 const port = 3000;
 //import routes
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 //Middleware routes
 app.use("/api/users", authRoute);
+app.use("/api/posts", postRoute);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
